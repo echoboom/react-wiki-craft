@@ -2,41 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Wikipedia-inspired design system. All colors MUST be HSL. */
 
 @layer base {
   :root {
+    /* Light theme - Wikipedia style */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 35%; /* Wikipedia blue #0645ad */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 17% 95%; /* Light gray backgrounds */
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 17% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 17% 95%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 16% 90%; /* Wikipedia border color #eaecf0 */
+    --input: 210 16% 90%;
+    --ring: 217 91% 35%;
 
-    --radius: 0.5rem;
+    /* Wikipedia-specific colors */
+    --wiki-link: 217 91% 35%; /* #0645ad */
+    --wiki-link-visited: 271 68% 32%; /* #6f32be */
+    --wiki-link-hover: 217 91% 30%;
+    --wiki-sidebar-bg: 210 17% 98%; /* #f8f9fa */
+    --wiki-content-bg: 0 0% 100%;
+    --wiki-header-bg: 0 0% 100%;
+    --wiki-border: 210 16% 90%; /* #eaecf0 */
+    --wiki-text-muted: 0 0% 33%; /* #54595d */
+    
+    --radius: 0rem; /* Wikipedia uses sharp corners */
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +65,53 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark theme - Wikipedia dark mode */
+    --background: 210 11% 7%; /* #0c0c0c */
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 11% 10%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 11% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 213 94% 68%; /* #3366cc - lighter blue for dark */
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 11% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 11% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 11% 15%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 210 11% 20%; /* #3c4043 */
+    --input: 210 11% 20%;
+    --ring: 213 94% 68%;
+
+    /* Wikipedia dark theme specific colors */
+    --wiki-link: 213 94% 68%; /* #3366cc */
+    --wiki-link-visited: 271 68% 50%; /* #8b5cf6 */
+    --wiki-link-hover: 213 94% 75%;
+    --wiki-sidebar-bg: 210 11% 10%; /* #1a1a1a */
+    --wiki-content-bg: 210 11% 7%; /* #0c0c0c */
+    --wiki-header-bg: 210 11% 10%; /* #1a1a1a */
+    --wiki-border: 210 11% 20%; /* #3c4043 */
+    --wiki-text-muted: 0 0% 70%; /* #b3b3b3 */
+    
+    --sidebar-background: 210 11% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 213 94% 68%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 210 11% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 11% 20%;
+    --sidebar-ring: 213 94% 68%;
   }
 }
 
@@ -101,5 +122,81 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Lato, Helvetica, Arial, sans-serif;
+  }
+
+  /* Wikipedia-specific typography */
+  .wiki-content {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+  }
+
+  .wiki-content h1, .wiki-content h2, .wiki-content h3, .wiki-content h4, .wiki-content h5, .wiki-content h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Lato, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    border-bottom: 1px solid hsl(var(--wiki-border));
+    padding-bottom: 0.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .wiki-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid hsl(var(--wiki-border));
+    padding-bottom: 0.5rem;
+  }
+
+  .wiki-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .wiki-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .wiki-content a {
+    color: hsl(var(--wiki-link));
+    text-decoration: none;
+  }
+
+  .wiki-content a:hover {
+    color: hsl(var(--wiki-link-hover));
+    text-decoration: underline;
+  }
+
+  .wiki-content a:visited {
+    color: hsl(var(--wiki-link-visited));
+  }
+
+  .wiki-content code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: hsl(var(--muted));
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.125rem;
+  }
+
+  /* Text size controls */
+  .wiki-text-small {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .wiki-text-standard {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .wiki-text-large {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+
+  /* Width controls */
+  .wiki-width-standard {
+    max-width: 1200px;
+  }
+
+  .wiki-width-wide {
+    max-width: 1600px;
   }
 }
