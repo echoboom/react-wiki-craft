@@ -1,170 +1,198 @@
 import WikipediaPageLayout from '@/components/WikipediaPageLayout';
 
 const Index = () => {
-  // Sample content with semantic diagram
+  // Julian Picaza Wikipedia-style content
   const sampleContent = (
     <>
-      <p>
-        From Julian.wiki, the convergence encyclopedia
-      </p>
-      
       <p className="italic text-wiki-text-muted mb-6">
-        For other uses, see <a href="#" className="text-wiki-link hover:underline">Semantics (disambiguation)</a>.
+        For other uses, see <a href="#" className="text-wiki-link hover:underline">Julian Picaza (disambiguation)</a>.
       </p>
 
       <div className="flex flex-col lg:flex-row gap-6 mb-6">
         <div className="flex-1">
           <p>
-            <strong>Semantics</strong> is the study of linguistic <a href="#" className="text-wiki-link hover:underline">meaning</a>. 
-            It examines what meaning is, how words get their meaning, and how the meaning of a complex expression 
-            depends on its parts. Part of this process involves the distinction between{' '}
-            <a href="#" className="text-wiki-link hover:underline">sense and reference</a>. 
-            Sense is given by the ideas and concepts associated with an expression while reference is the object 
-            to which an expression points. Semantics contrasts with{' '}
-            <a href="#" className="text-wiki-link hover:underline">syntax</a>, which studies the rules that 
-            dictate how to create <a href="#" className="text-wiki-link hover:underline">grammatically</a> correct 
-            sentences, and <a href="#" className="text-wiki-link hover:underline">pragmatics</a>, which investigates 
-            how people use language in communication. Semantics, together with syntactics and pragmatics, is a part of{' '}
-            <a href="#" className="text-wiki-link hover:underline">semiotics</a>.
+            <strong>Julian Picaza</strong> (born May 20, 1977) is a <a href="#" className="text-wiki-link hover:underline">Basque</a>/<a href="#" className="text-wiki-link hover:underline">Cuban-American</a> systems integrator, <a href="#" className="text-wiki-link hover:underline">convergence specialist</a>, and <a href="#" className="text-wiki-link hover:underline">digital nomad</a> known for his work bridging creative and technical domains across emerging technologies, <a href="#" className="text-wiki-link hover:underline">product management</a>, <a href="#" className="text-wiki-link hover:underline">digital fabrication</a>, <a href="#" className="text-wiki-link hover:underline">film/VFX production</a>, and <a href="#" className="text-wiki-link hover:underline">contemporary fine arts</a>. Currently operating as an independent consultant, he is recognized for his ability to translate between creative vision and technical execution across disparate industries.
           </p>
         </div>
         
-        {/* Semantic Triangle Diagram */}
+        {/* Personal Info Box */}
         <div className="lg:w-80">
           <div className="bg-muted p-4 rounded border">
-            <div className="relative h-64 flex items-center justify-center">
-              <svg viewBox="0 0 300 200" className="w-full h-full">
-                {/* Triangle */}
-                <path
-                  d="M150 30 L50 170 L250 170 Z"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                />
-                
-                {/* Arrows */}
-                <path
-                  d="M150 50 L150 80"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  markerEnd="url(#arrowhead)"
-                />
-                <path
-                  d="M130 100 L70 150"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  markerEnd="url(#arrowhead)"
-                />
-                <path
-                  d="M170 100 L230 150"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  markerEnd="url(#arrowhead)"
-                />
-                
-                {/* Arrow marker */}
-                <defs>
-                  <marker
-                    id="arrowhead"
-                    markerWidth="10"
-                    markerHeight="7"
-                    refX="10"
-                    refY="3.5"
-                    orient="auto"
-                  >
-                    <polygon
-                      points="0 0, 10 3.5, 0 7"
-                      fill="currentColor"
-                    />
-                  </marker>
-                </defs>
-                
-                {/* Labels */}
-                <text x="150" y="25" textAnchor="middle" className="text-sm font-semibold">
-                  apple
-                </text>
-                <text x="50" y="185" textAnchor="middle" className="text-sm">
-                  🍎
-                </text>
-                <text x="250" y="185" textAnchor="middle" className="text-sm">
-                  🍏
-                </text>
-              </svg>
+            <div className="text-center mb-4">
+              <div className="w-32 h-32 bg-muted-foreground/20 rounded mx-auto mb-2 flex items-center justify-center text-xs text-muted-foreground">
+                [Photo placeholder]
+              </div>
+              <h3 className="font-semibold">Julian Picaza</h3>
             </div>
-            <p className="text-xs text-center text-wiki-text-muted mt-2">
-              A central topic in semantics concerns the relation between language, world, and mental concepts.
-            </p>
+            <div className="space-y-2 text-sm">
+              <div><strong>Born:</strong> May 20, 1977</div>
+              <div><strong>Nationality:</strong> Basque/Cuban-American</div>
+              <div><strong>Occupation:</strong> Systems integrator, Convergence specialist</div>
+              <div><strong>Known for:</strong> Cross-domain technical integration</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <p>
-        <a href="#" className="text-wiki-link hover:underline">Lexical semantics</a> is the branch of semantics 
-        that studies <a href="#" className="text-wiki-link hover:underline">word meaning</a>. It examines whether 
-        words have one or several meanings and in what{' '}
-        <a href="#" className="text-wiki-link hover:underline">lexical relations</a> they stand to one another. 
-        Phrasal semantics studies the meaning of sentences by exploring the phenomenon of{' '}
-        <a href="#" className="text-wiki-link hover:underline">compositionality</a> or how new meanings can be 
-        created by arranging words. <a href="#" className="text-wiki-link hover:underline">Formal semantics</a> relies 
-        on <a href="#" className="text-wiki-link hover:underline">logic</a> and{' '}
-        <a href="#" className="text-wiki-link hover:underline">mathematics</a> to provide precise frameworks of the 
-        relation between language and meaning. <a href="#" className="text-wiki-link hover:underline">Cognitive semantics</a> examines 
-        meaning from a psychological perspective and assumes a close relation between language ability and the 
-        conceptual structures used to understand the world. Other branches of semantics include{' '}
-        <a href="#" className="text-wiki-link hover:underline">conceptual semantics</a>,{' '}
-        <a href="#" className="text-wiki-link hover:underline">computational semantics</a>, and cultural semantics.
-      </p>
-
-      <h2>Definition and related fields</h2>
       <details open>
-        <summary className="cursor-pointer text-lg font-semibold text-primary hover:underline">
-          Basic concepts
+        <summary className="cursor-pointer text-lg font-semibold text-primary hover:underline mb-4">
+          Early life and education
         </summary>
         <div className="mt-4 pl-4">
           <p>
-            Semantics is the study of meaning in language. It is concerned with the relationship between signifiers 
-            like words, phrases, signs, and symbols and what they stand for in reality, their denotation.
+            Julian's intellectual foundation was shaped by early exposure to <a href="#" className="text-wiki-link hover:underline">systems thinking</a> through voracious reading that spanned <a href="#" className="text-wiki-link hover:underline">Taoist philosophy</a>, <a href="#" className="text-wiki-link hover:underline">complexity science</a>, and cognitive frameworks. Works like Douglas Hofstadter's <em><a href="#" className="text-wiki-link hover:underline">Gödel, Escher, Bach</a></em> and research from the <a href="#" className="text-wiki-link hover:underline">Santa Fe Institute</a> on emergent systems planted seeds that would quietly influence his thinking for decades before emerging as conscious methodology.
+          </p>
+          <p className="mt-4">
+            Growing up in a Basque/Cuban-American household, Julian developed an intuitive understanding of cultural convergence and the fluid nature of identity and meaning—concepts that would later inform his professional approach to bridging seemingly disparate domains.
           </p>
         </div>
       </details>
 
-      <h2>Branches</h2>
-      <p>
-        Semantics is a diverse field with many different approaches and sub-disciplines. The main branches include 
-        lexical semantics, phrasal semantics, and formal semantics.
-      </p>
+      <details>
+        <summary className="cursor-pointer text-lg font-semibold text-primary hover:underline mb-4">
+          Contemporary fine arts
+        </summary>
+        <div className="mt-4 pl-4">
+          <p className="italic text-muted-foreground">
+            [Section to be developed - Julian's ongoing artistic practice and how it informs his systems thinking approach]
+          </p>
+          <h3 className="font-semibold mt-4 mb-2">Notable works and exhibitions</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li><strong>[Project Name]</strong> (Year) - Medium and significance</li>
+            <li><strong>[Project Name]</strong> (Year) - Medium and significance</li>
+          </ul>
+        </div>
+      </details>
 
-      <h3>Lexical semantics</h3>
-      <p>
-        Lexical semantics focuses on the meaning of individual words and the relationships between them.
-      </p>
+      <details>
+        <summary className="cursor-pointer text-lg font-semibold text-primary hover:underline mb-4">
+          Film and VFX career
+        </summary>
+        <div className="mt-4 pl-4">
+          <p>
+            Julian's technical career began in <a href="#" className="text-wiki-link hover:underline">film production</a>, where his roles expanded from Camera Operator to <a href="#" className="text-wiki-link hover:underline">VFX Supervisor</a> across [comprehensive filmography to be detailed]. His ability to understand both the creative requirements of directors and the technical constraints of post-production workflows established his reputation for "signal flow" thinking—tracking how creative intent moves through complex technical systems.
+          </p>
+          <h3 className="font-semibold mt-4 mb-2">Notable projects</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li><strong>[Project Name]</strong> (Year) - Role and key contribution</li>
+            <li><strong>[Project Name]</strong> (Year) - Role and key contribution</li>
+          </ul>
+        </div>
+      </details>
 
-      <h3>Formal semantics</h3>
-      <p>
-        Formal semantics uses mathematical and logical tools to analyze meaning in natural language.
-      </p>
+      <details>
+        <summary className="cursor-pointer text-lg font-semibold text-primary hover:underline mb-4">
+          Digital fabrication and manufacturing
+        </summary>
+        <div className="mt-4 pl-4">
+          <p>
+            Julian's journey in <a href="#" className="text-wiki-link hover:underline">digital fabrication</a> began during his studies in the Product Design track of Industrial Design at <a href="#" className="text-wiki-link hover:underline">Art Center College of Design</a> in Pasadena. This foundation led to managing multiple fabrication shops over many years, primarily focusing on <a href="#" className="text-wiki-link hover:underline">CNC</a> and <a href="#" className="text-wiki-link hover:underline">laser cutting</a> operations.
+          </p>
+          <p className="mt-4">
+            His expertise culminated at <strong>SmartMFG</strong>, where he led cross-functional teams developing digital fabrication workflows. His work focused on bridging the gap between digital design concepts and physical production realities, developing systematic approaches to complex manufacturing challenges.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary className="cursor-pointer text-lg font-semibold text-primary hover:underline mb-4">
+          Product management and operations
+        </summary>
+        <div className="mt-4 pl-4">
+          <p>
+            Julian's convergence approach proved valuable in <a href="#" className="text-wiki-link hover:underline">product management</a> roles, where his ability to understand creative vision, technical feasibility, and business requirements simultaneously allowed him to navigate complex cross-functional challenges. His work at <strong>SyncFab</strong> and subsequent role at <strong>SmartMFG</strong> demonstrated his capacity to translate between stakeholder needs and technical delivery.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary className="cursor-pointer text-lg font-semibold text-primary hover:underline mb-4">
+          Systems thinking and philosophy
+        </summary>
+        <div className="mt-4 pl-4">
+          <p>
+            Julian's approach is influenced by <a href="#" className="text-wiki-link hover:underline">Taoist</a> concepts of interconnectedness, particularly the idea of "Goblet Words"—meaning that flows between different conceptual vessels rather than being trapped in rigid categories. He rejects traditional field boundaries, seeing creative and technical domains as naturally overlapping systems.
+          </p>
+          <p className="mt-4">
+            This philosophical foundation, first encountered in his early reading but operating quietly beneath his thinking for decades, eventually emerged as conscious methodology in his professional work. The integration of Eastern philosophy with Western <a href="#" className="text-wiki-link hover:underline">complexity science</a> creates his distinctive approach to problem-solving and systems integration.
+          </p>
+          <h3 className="font-semibold mt-4 mb-2">Key frameworks</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li><strong>Signal Flow Analysis</strong> - Tracing how creative intent moves through technical systems</li>
+            <li><strong>Epistemic Fluency</strong> - Moving between different ways of organizing knowledge</li>
+            <li><strong>Convergence Integration</strong> - Finding value in liminal spaces between established fields</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary className="cursor-pointer text-lg font-semibold text-primary hover:underline mb-4">
+          Current work
+        </summary>
+        <div className="mt-4 pl-4">
+          <p>
+            Julian operates as an independent consultant specializing in convergence projects that require both creative vision and technical execution. Working remotely from various locations, he develops both client work and speculative projects aimed at sustainable income generation while maintaining his nomadic lifestyle.
+          </p>
+          <h3 className="font-semibold mt-4 mb-2">Active projects</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li><strong><a href="http://syntactic.studio" className="text-wiki-link hover:underline">Syntactic Studio</a></strong> - Creative technology consulting</li>
+            <li><strong><a href="http://flowconnector.dev" className="text-wiki-link hover:underline">FlowConnector</a></strong> - Systems integration services</li>
+            <li><strong>Knowledge graph development</strong> - This site and related research</li>
+          </ul>
+        </div>
+      </details>
+
+      <h2 id="selected-projects">Selected projects</h2>
+      <p className="italic text-muted-foreground">[To be developed across all domains]</p>
+
+      <h2 id="publications">Publications and talks</h2>
+      <p className="italic text-muted-foreground">[To be developed]</p>
+
+      <h2 id="references">References</h2>
+      <p className="italic text-muted-foreground">[To be developed]</p>
     </>
   );
 
   const tableOfContents = [
-    { id: 'definition', title: 'Definition and related fields', level: 1 },
-    { id: 'basic-concepts', title: 'Basic concepts', level: 2 },
-    { id: 'branches', title: 'Branches', level: 1 },
-    { id: 'lexical', title: 'Lexical semantics', level: 2 },
-    { id: 'formal', title: 'Formal semantics', level: 2 },
+    { id: 'early-life', title: 'Early life and education', level: 1 },
+    { id: 'fine-arts', title: 'Contemporary fine arts', level: 1 },
+    { id: 'film-vfx', title: 'Film and VFX career', level: 1 },
+    { id: 'digital-fab', title: 'Digital fabrication and manufacturing', level: 1 },
+    { id: 'product-mgmt', title: 'Product management and operations', level: 1 },
+    { id: 'systems', title: 'Systems thinking and philosophy', level: 1 },
+    { id: 'current', title: 'Current work', level: 1 },
+    { id: 'selected-projects', title: 'Selected projects', level: 1 },
+    { id: 'publications', title: 'Publications and talks', level: 1 },
+    { id: 'references', title: 'References', level: 1 },
   ];
 
   return (
     <WikipediaPageLayout
-      title="Semantics"
+      title="Julian Picaza"
+      subtitle="From Julian.wiki, the convergence encyclopedia"
       content={sampleContent}
-      categories={['Semantics', 'Philosophy of language', 'Linguistics', 'Semiotics']}
+      categories={[
+        'American systems theorists', 
+        'Film industry workers', 
+        'Digital fabrication', 
+        'Product managers', 
+        'Complexity science', 
+        'Game B movement', 
+        'Metamodernism'
+      ]}
       metadata={{
-        tags: ['Meaning', 'Language', 'Philosophy', 'Cognitive science'],
-        notes: '<p>This article covers the basic principles of semantics in linguistics and philosophy.</p>',
+        tags: [
+          'Systems thinking', 
+          'Digital fabrication', 
+          'VFX production', 
+          'Product management', 
+          'Convergence theory', 
+          'Creative technology'
+        ],
+        notes: '<p>This article covers Julian Picaza\'s multidisciplinary career spanning creative and technical domains, with emphasis on his systems integration approach and convergence methodology.</p>',
         externalLinks: [
-          { title: 'Stanford Encyclopedia of Philosophy: Semantics', url: 'https://plato.stanford.edu/entries/semantics/' },
-          { title: 'Linguistics Society: Semantic Theory', url: 'https://example.com/semantics' }
+          { title: 'Syntactic Studio - Official website', url: 'http://syntactic.studio' },
+          { title: 'FlowConnector - Systems integration services', url: 'http://flowconnector.dev' }
         ]
       }}
       tableOfContents={tableOfContents}
