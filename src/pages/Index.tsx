@@ -19,7 +19,7 @@ const Index = () => {
         <div className="lg:w-80">
           <div className="bg-muted p-4 rounded border">
             <div className="text-center mb-4">
-              <div className="w-32 h-32 rounded mx-auto mb-2 overflow-hidden">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded mx-auto mb-2 overflow-hidden">
                 <img 
                   src="/lovable-uploads/86f0b0ce-1720-43fd-a784-ff699a4e7519.png" 
                   alt="Julian Picaza" 
