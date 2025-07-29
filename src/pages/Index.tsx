@@ -1,8 +1,8 @@
 import WikipediaPageLayout from '@/components/WikipediaPageLayout';
 
 const Index = () => {
-  // Julian Picaza Wikipedia-style content
-  const sampleContent = (
+  // Julian Picaza content - now demonstrates the reusable component structure
+  const julianPicazaContent = (
     <>
       <p className="italic text-wiki-text-muted mb-6">
         For other uses, see <a href="#" className="text-wiki-link hover:underline">Julian Picaza (disambiguation)</a>.
@@ -15,7 +15,6 @@ const Index = () => {
           </p>
         </div>
         
-        {/* Personal Info Box */}
         <div className="lg:w-80">
           <div className="bg-muted p-4 rounded border">
             <div className="text-center mb-4">
@@ -170,35 +169,39 @@ const Index = () => {
     { id: 'references', title: 'References', level: 1 },
   ];
 
+  const julianPicazaMetadata = {
+    tags: [
+      'Systems thinking', 
+      'Digital fabrication', 
+      'VFX production', 
+      'Product management', 
+      'Convergence theory', 
+      'Creative technology'
+    ],
+    notes: '<p>This article covers Julian Picaza\'s multidisciplinary career spanning creative and technical domains, with emphasis on his systems integration approach and convergence methodology.</p>',
+    externalLinks: [
+      { title: 'Syntactic Studio - Official website', url: 'http://syntactic.studio' },
+      { title: 'FlowConnector - Systems integration services', url: 'http://flowconnector.dev' }
+    ]
+  };
+
+  const julianPicazaCategories = [
+    'American systems theorists', 
+    'Film industry workers', 
+    'Digital fabrication', 
+    'Product managers', 
+    'Complexity science', 
+    'Game B movement', 
+    'Metamodernism'
+  ];
+
   return (
     <WikipediaPageLayout
       title="Julian Picaza"
       subtitle="From Julian.wiki, the convergence encyclopedia"
-      content={sampleContent}
-      categories={[
-        'American systems theorists', 
-        'Film industry workers', 
-        'Digital fabrication', 
-        'Product managers', 
-        'Complexity science', 
-        'Game B movement', 
-        'Metamodernism'
-      ]}
-      metadata={{
-        tags: [
-          'Systems thinking', 
-          'Digital fabrication', 
-          'VFX production', 
-          'Product management', 
-          'Convergence theory', 
-          'Creative technology'
-        ],
-        notes: '<p>This article covers Julian Picaza\'s multidisciplinary career spanning creative and technical domains, with emphasis on his systems integration approach and convergence methodology.</p>',
-        externalLinks: [
-          { title: 'Syntactic Studio - Official website', url: 'http://syntactic.studio' },
-          { title: 'FlowConnector - Systems integration services', url: 'http://flowconnector.dev' }
-        ]
-      }}
+      content={julianPicazaContent}
+      categories={julianPicazaCategories}
+      metadata={julianPicazaMetadata}
       tableOfContents={tableOfContents}
     />
   );
