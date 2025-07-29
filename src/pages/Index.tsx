@@ -1,7 +1,7 @@
 import WikipediaPageLayout from '@/components/WikipediaPageLayout';
 
 const Index = () => {
-  // Julian Picaza content - now demonstrates the reusable component structure
+  // Julian Picaza content
   const julianPicazaContent = (
     <>
       <p className="italic text-wiki-text-muted mb-6">
